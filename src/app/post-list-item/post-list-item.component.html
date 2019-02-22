@@ -1,0 +1,27 @@
+<section class="container">
+<h1>Exercice Angular</h1>
+  <div class="row">
+    <div class="card fl-left" [ngClass]="{'bg-success' : post?.loveIts > 0 , 'bg-danger' : post?.loveIts < 0 }" style="border:1px solid; color:#000 !important;">
+      <section class="card-cont">
+        <h3>{{post?.title}}</h3>
+        <div class="even-date">
+         <i class="fa fa-calendar"></i>
+         <time>
+           <small>Djouekan joel</small>
+           <span>{{post?.created_at}}</span>
+         </time>
+        </div>
+        <div class="even-info">
+          <i class="fa fa-map-marker"></i>
+          <p>
+             {{post?.content}}
+          </p>
+        </div>
+      </section>
+	  		<div class="col-sm-12">
+			<button class="btn btn-info  pull-right" style="width:auto; margin:10px;" (click)="loveItsIncr();">love it</button>
+			<button class="btn btn-warning pull-right" style="width:auto; margin:10px; float:right;" (click)="loveItsDecr();">don't love it</button>
+		</div>
+    </div>
+ </div>
+</section>
