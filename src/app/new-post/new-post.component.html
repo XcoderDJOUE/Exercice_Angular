@@ -1,0 +1,15 @@
+<div class="col-sm-12 " style="justify-content: center; display: flex;">
+
+  <form [formGroup]="formPost" (ngSubmit)="onSubmitForm()">
+    <div class="form-group">
+      <label for="Titre">Titre de votre post:</label>
+      <input type="text" class="form-control" id="Titre" formControlName="titre">
+    </div>
+    <div class="form-group">
+      <label for="contenue">Contenu de votre post:</label>
+      <textarea  class="form-control" id="contenue" formControlName="contenue"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="formPost.invalid">Submit</button>
+  </form>
+
+</div>

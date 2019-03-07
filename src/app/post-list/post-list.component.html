@@ -1,1 +1,7 @@
-<app-post-list-item *ngFor="let alpha of post" [post]="alpha" [color]="" ></app-post-list-item>
+<section class="container">
+  <h1>Exercice Angular</h1>
+<app-post-list-item *ngFor="let alpha of post; index as i" [post]="alpha" [id]="i" [color]="" ></app-post-list-item>
+  <div class="text text-danger" *ngIf="postService.loard == false && (post.length == 0 || post == null)"> Aucun Post effectué !</div>
+  <div class="text text-danger" *ngIf="postService.loard == true && (post.length == 0 || post == null)"> Chargement...</div>
+
+</section>
